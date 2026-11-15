@@ -1,2 +1,2 @@
-class Shema:
+class Schema:
     pass
