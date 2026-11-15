@@ -14,5 +14,5 @@ class Worker(ABC):
         pass
     
     @abstractmethod
-    def execute(self, context: Context) -> Context:
+    def run(self, context: Context) -> Context:
         pass
