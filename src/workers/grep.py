@@ -1,4 +1,4 @@
-from pipeline.context import Context, DataType
+from src.pipeline import Context, DataType
 from src.workers.worker import Worker
 
 
