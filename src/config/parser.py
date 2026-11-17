@@ -1,4 +1,4 @@
-from src.config import Schema
+from src.config.schema import Schema
 
 
 class Parser:
@@ -8,5 +8,5 @@ class Parser:
     
         
     def parse(self) -> Schema:
-        pass
+        return Schema()
         

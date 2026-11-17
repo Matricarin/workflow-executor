@@ -1,5 +1,5 @@
-from src import workers
+from src.workers.worker import Worker
 
 
-class Writefile(workers.Worker):
+class Writefile(Worker):
     pass

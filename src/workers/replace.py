@@ -1,5 +1,5 @@
-from src import workers
+from src.workers.worker import Worker
 
 
-class Replace(workers.Worker):
+class Replace(Worker):
     pass

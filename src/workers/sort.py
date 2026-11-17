@@ -1,5 +1,5 @@
-from src import workers
+from src.workers.worker import Worker
 
 
-class Sort(workers.Worker):
+class Sort(Worker):
     pass
