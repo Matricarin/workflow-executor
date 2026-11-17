@@ -1,5 +1,2 @@
-from abc import ABC, abstractmethod
-
-
-class Io(ABC):
+class Io():
     pass
