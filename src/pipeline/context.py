@@ -7,5 +7,5 @@ class DataType(Enum):
     TEXT = auto()
     
 @dataclass(frozen=True)
-class Context():
+class Context:
     text:str | None = None

@@ -1,18 +1,30 @@
 from abc import ABC, abstractmethod
 
-from src.pipeline.context import Context
+from src.pipeline.context import Context, DataType
 
 
 class Worker(ABC):
-    """
-    Abstract class for nodes in pipeline
-    """
+    ''' Base class for nodes in pipeline '''
     
     @property
     @abstractmethod
     def name(self) -> str:
-        pass
+        ''' Node name '''
+        ...
+        
+    @property
+    @abstractmethod
+    def output_type(self) -> DataType:
+        ''' Output data type '''
+        ...
+    
+    @property
+    @abstractmethod
+    def input_type(self) -> DataType:
+        ''' Input data type '''
+        ...
     
     @abstractmethod
     def run(self, context: Context) -> Context:
-        pass
+        ''' Nodes business logic '''
+        ...
