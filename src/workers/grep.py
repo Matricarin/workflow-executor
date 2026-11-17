@@ -1,5 +1,5 @@
-from src import workers
+from src.workers import Worker
 
 
-class Grep(workers.Worker):
+class Grep(Worker):
     pass

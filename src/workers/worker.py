@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.pipeline import Context
+from src.pipeline.context import Context
 
 
 class Worker(ABC):
