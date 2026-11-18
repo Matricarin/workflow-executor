@@ -19,8 +19,8 @@ class Sort(Worker):
     def run(self, context: Context) -> Context:
         if context.text:
             source = context.text.splitlines()
-            sorted(source)
-            return Context("\n".join(source))
+            ordered = sorted(source)
+            return Context("\n".join(ordered))
         else:
             return context
         
