@@ -5,7 +5,7 @@ from src.pipeline.worker import Worker
 
 class Readfile(Worker):
     
-    def __init__(self, path:str, reader:FileReader):
+    def __init__(self, path:str, reader:FileReader | None = None):
             self._path = path
             self._reader = reader or FileReader()
         

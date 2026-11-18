@@ -5,7 +5,7 @@ from src.pipeline.worker import Worker
 
 class Writefile(Worker):
     
-    def __init__(self, path:str, writer: FileWriter):
+    def __init__(self, path:str, writer: FileWriter | None = None):
                self._path = path
                self._writer = writer or FileWriter()
            
