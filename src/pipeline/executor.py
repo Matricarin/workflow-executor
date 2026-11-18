@@ -1,4 +1,4 @@
-from src.workers import Worker
+from src.pipeline.worker import Worker
 
 
 class Executor:

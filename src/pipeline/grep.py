@@ -1,5 +1,5 @@
-from src.pipeline import Context, DataType
-from src.workers.worker import Worker
+from src.pipeline.context import Context, DataType
+from src.pipeline.worker import Worker
 
 
 class Grep(Worker):
