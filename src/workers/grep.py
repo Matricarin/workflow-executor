@@ -22,10 +22,7 @@ class Grep(Worker):
     def run(self, context: Context) -> Context:
         if not context.text:
             return context
-        source: list[str] = context.text.split(sep="\n")
-        filtered: list[str] = []
-        for line in source:
-            if line.__contains__(self._word):
-                filtered.append(line)
+        source: list[str] = context.text.splitlines()
+        filtered: list[str] = [line for line in source if self._word in line]
         return Context("\n".join(filtered))
         
