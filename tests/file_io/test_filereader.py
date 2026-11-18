@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.io.file_reader import FileReader
+from src.file_io.file_reader import FileReader
 
 
 def test_read_test_data1_by_path():

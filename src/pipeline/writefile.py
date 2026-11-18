@@ -1,4 +1,4 @@
-from src.io.file_writer import FileWriter
+from src.file_io.file_writer import FileWriter
 from src.pipeline.context import Context, DataType
 from src.pipeline.worker import Worker
 
