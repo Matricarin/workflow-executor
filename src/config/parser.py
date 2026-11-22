@@ -41,16 +41,18 @@ class Parser:
                 case _:
                     try:    
                                                
-                        tokens: list[str] = current_line.split(sep=' ')     
+                        lcl, rcl = current_line.split(sep='=', maxsplit=1)      
                                                 
-                        id_str: str = tokens[0]
+                        id_str: str = lcl
+                        
+                        tokens = rcl.strip().split()
                         
                         if not str.isdigit(id_str) and float.is_integer(float(id_str)):
                             raise ConfigSyntaxError("Id for block in specification is not digit.")
                         
-                        command: str = tokens[2]
+                        command: str = tokens[0]
                         
-                        args: tuple[str, ...] = tuple(arg for arg in tokens[2:])
+                        args: tuple[str, ...] = tuple(tokens[1:])
                         
                         block_spec = BlockSpec(id=int(id_str), command=command, args=args)
                         
